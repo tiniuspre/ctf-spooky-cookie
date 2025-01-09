@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spooky Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='images/ghost.png') }}" alt="Ghost" class="floating-ghost" id="ghostImg">
+    <div class="container">
+        <h1>Haunted House</h1>
+        <p>This is where the ghosts live</p>
+        <a href="https://tinyurl.com/sxmkv9c8" id="spookyButton" class="button">Click Me</a>    </div>
+</body>
+</html>

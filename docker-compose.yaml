@@ -1,0 +1,8 @@
+services:
+  spooky-cookie:
+    build:
+      context: .
+    ports:
+      - "8000:5000"
+    environment:
+      - FLAG=CTFkom{5up32_53cu23_c00k13}

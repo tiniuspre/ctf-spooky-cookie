@@ -1,0 +1,136 @@
+/* Import Spooky Font */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+/* Global Styles */
+body {
+    background-color: #0d0d0d;
+    color: #f0f0f0;
+    font-family: 'Creepster', cursive;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    animation: flicker 3s infinite;
+}
+
+/* Container Styling */
+.container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 4em;
+    color: #ff3333;
+    text-shadow: 2px 2px #000;
+    margin-bottom: 20px;
+}
+
+/* Subheading Styling */
+h2 {
+    font-size: 2em;
+    color: #33ff33;
+    text-shadow: 1px 1px #000;
+    margin-bottom: 20px;
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+
+/* Button Styling */
+button {
+    background-color: #333;
+    color: #ff3333;
+    border: 2px solid #ff3333;
+    padding: 15px 30px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ff3333;
+    color: #333;
+    transform: scale(1.05);
+}
+
+/* Link Styling */
+a {
+    color: #ff3333;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Flicker Animation */
+@keyframes flicker {
+    0%, 100% { background-color: #0d0d0d; }
+    50% { background-color: #1a1a1a; }
+}
+
+/* Floating Ghost Animation */
+@keyframes float {
+    0% {
+        transform: translate(-50%, -50%) translate(0, 0) scale(1);
+    }
+    25% {
+        transform: translate(-50%, -50%) translate(100px, -50px) scale(1.2);
+    }
+    50% {
+        transform: translate(-50%, -50%) translate(0px, -100px) scale(1);
+    }
+    75% {
+        transform: translate(-50%, -50%) translate(-100px, -50px) scale(0.8);
+    }
+    100% {
+        transform: translate(-50%, -50%) translate(0, 0) scale(1);
+    }
+}
+
+/* Additional Ghost Movement (Optional for More Dynamic Path) */
+@keyframes ghostMove {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Floating Ghost Image */
+.floating-ghost {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    width: 100px;
+    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+    animation: floatSimple 5s infinite;
+}
+
+@keyframes floatSimple {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
